@@ -56,6 +56,7 @@ export default function Navbar() {
             alt="Luxury Access"
             width={180}
             height={48}
+            className="logo-dynamic"
             style={{ objectFit: "contain", height: 42, width: "auto" }}
             priority
           />
@@ -84,11 +85,8 @@ export default function Navbar() {
         {/* Desktop Actions */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }} className="hide-mobile">
           <ThemeToggle />
-          <Link href="/provider-dashboard" className="label-caps" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Provider Login
-          </Link>
-          <Link href="/admin" className="label-caps" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Admin
+          <Link href="/login" className="label-caps" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
+            Login
           </Link>
           <Link href="/request" className="btn btn-primary" style={{ textDecoration: "none" }}>
             Start a Request
@@ -131,11 +129,8 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/provider-dashboard" className="label-caps" onClick={() => setMenuOpen(false)} style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Provider Login
-          </Link>
-          <Link href="/admin" className="label-caps" onClick={() => setMenuOpen(false)} style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Admin
+          <Link href="/login" className="label-caps" onClick={() => setMenuOpen(false)} style={{ color: "var(--text-muted)", textDecoration: "none" }}>
+            Login
           </Link>
           <Link href="/request" className="btn btn-primary" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", textAlign: "center" }}>
             Start a Request

@@ -117,12 +117,18 @@ export default function ProviderCard({ provider, compact = false }: ProviderCard
             {getStatusLabel(provider.availability)}
           </div>
 
-          {/* Placeholder pattern */}
-          <div className="img-inner" style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100%", flexDirection: "column", gap: 8 }}>
-            <span style={{ fontSize: 40, opacity: 0.3 }}>{provider.category === "chef" ? "👨‍🍳" : "🏛️"}</span>
-            <span style={{ fontSize: 11, opacity: 0.4, fontFamily: "Manrope", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>
-              {provider.name}
-            </span>
+          {/* Background Image / Placeholder */}
+          <div className="img-inner" style={{ position: "relative", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 8 }}>
+            {provider.imageUrl ? (
+              <img src={provider.imageUrl} alt={provider.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            ) : (
+              <>
+                <span style={{ fontSize: 40, opacity: 0.3 }}>{provider.category === "chef" ? "👨‍🍳" : "🏛️"}</span>
+                <span style={{ fontSize: 11, opacity: 0.4, fontFamily: "Manrope", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-muted)" }}>
+                  {provider.name}
+                </span>
+              </>
+            )}
           </div>
         </div>
 

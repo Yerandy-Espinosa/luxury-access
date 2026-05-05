@@ -34,6 +34,7 @@ export default function Footer() {
               alt="Luxury Access"
               width={160}
               height={44}
+              className="logo-dynamic"
               style={{ objectFit: "contain", height: 40, width: "auto", marginBottom: 16 }}
             />
             <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7, maxWidth: 280, marginBottom: 24 }}>
