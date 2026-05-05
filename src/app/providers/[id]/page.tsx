@@ -21,7 +21,7 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
       <Navbar />
       <div style={{ paddingTop: 72 }}>
         <div style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-surface)" }}>
-          <div className="container-luxury" style={{ padding: "16px 64px" }}>
+          <div className="container-luxury py-4">
             <Link href={provider.category === "chef" ? "/chefs" : "/villas"}
               style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "var(--text-secondary)", textDecoration: "none", fontSize: 13 }}>
               <ArrowLeft size={14} /> Back
@@ -29,7 +29,7 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
           </div>
         </div>
 
-        <div style={{ height: 500, position: "relative", overflow: "hidden", background: "var(--bg-surface)" }}>
+        <div className="relative overflow-hidden bg-surface h-[350px] lg:h-[500px]">
           {provider.imageUrl ? (
             <Image
               src={provider.imageUrl}
@@ -39,7 +39,7 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
               priority
             />
           ) : (
-            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 80, opacity: 0.15 }}>
+            <div className="absolute inset-0 flex items-center justify-center text-8xl opacity-15">
               {provider.category === "chef" ? "👨‍🍳" : "🏛️"}
             </div>
           )}
@@ -47,17 +47,17 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
           {/* Gradients for depth and readability */}
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, transparent 40%, var(--bg) 100%)", zIndex: 1 }} />
           
-          <div style={{ position: "absolute", top: 32, left: 64, zIndex: 2, padding: "6px 14px", background: "rgba(0,0,0,0.6)", border: "1px solid var(--gold-border)", color: "var(--gold)", backdropFilter: "blur(4px)" }} className="label-caps">
+          <div className="absolute top-8 left-4 lg:left-16 z-10 px-3.5 py-1.5 bg-black/60 border border-gold-border color-gold backdrop-blur-sm label-caps" style={{ color: "var(--gold)" }}>
             {provider.category === "chef" ? "Private Chef" : "Luxury Villa"}
           </div>
-          <div style={{ position: "absolute", bottom: 32, left: 64, zIndex: 2, display: "flex", alignItems: "center", gap: 8 }}>
+          <div className="absolute bottom-8 left-4 lg:left-16 z-10 flex items-center gap-2">
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: availColor }} />
             <span style={{ color: "#FAF7F2", fontSize: 13, fontFamily: "Manrope", fontWeight: 600, textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}>{getStatusLabel(provider.availability)}</span>
           </div>
         </div>
 
-        <div className="container-luxury" style={{ padding: "0 64px 80px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 360px", gap: 64, marginTop: 48 }}>
+        <div className="container-luxury" style={{ paddingBottom: 80 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-10 lg:gap-16 mt-12">
             <div>
               <h1 style={{ fontFamily: "Noto Serif", fontSize: 40, fontWeight: 400, marginBottom: 12 }}>{provider.name}</h1>
               <p style={{ color: "var(--gold)", fontSize: 16, fontStyle: "italic", fontFamily: "Noto Serif", marginBottom: 32 }}>{provider.tagline}</p>
@@ -127,7 +127,7 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
             </div>
 
             {/* Booking sidebar */}
-            <div style={{ position: "sticky", top: 96, alignSelf: "flex-start" }}>
+            <div className="relative lg:sticky lg:top-24 self-start order-first lg:order-last">
               <div className="card-elevated" style={{ padding: 32 }}>
                 <div style={{ marginBottom: 20 }}>
                   <span style={{ fontSize: 12, color: "var(--text-muted)", fontFamily: "Manrope" }}>Starting from</span>

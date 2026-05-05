@@ -230,14 +230,7 @@ export default function HomePage() {
           }}
         >
           <div
-            className="container-luxury"
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              padding: "20px 64px",
-              flexWrap: "wrap",
-              gap: 24,
-            }}
+              className="container-luxury flex flex-wrap justify-around gap-6 py-5"
           >
             {[
               { value: "500+", label: t("home.stats.providers") },

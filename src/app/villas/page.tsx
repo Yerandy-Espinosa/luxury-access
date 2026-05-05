@@ -43,7 +43,7 @@ export default function VillasPage() {
 
       {/* Filters */}
       <section style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-surface)" }}>
-        <div className="container-luxury" style={{ padding: "20px 64px", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+        <div className="container-luxury" style={{ padding: "20px 0", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
           <div style={{ position: "relative", flex: "1 1 280px" }}>
             <Search size={15} style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "var(--text-muted)" }} />
             <input
@@ -88,7 +88,7 @@ export default function VillasPage() {
               <p style={{ color: "var(--text-muted)", fontSize: 16 }}>{t("villas.noMatch")}</p>
             </div>
           ) : (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 28 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 28 }}>
               {filtered.map(p => <ProviderCard key={p.id} provider={p} />)}
             </div>
           )}

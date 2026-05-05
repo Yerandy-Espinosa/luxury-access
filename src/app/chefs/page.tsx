@@ -49,7 +49,7 @@ export default function ChefsPage() {
       <section style={{ borderBottom: "1px solid var(--border)", background: "var(--bg-surface)" }}>
         <div
           className="container-luxury"
-          style={{ padding: "20px 64px", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}
+          style={{ padding: "20px 0", display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}
         >
           <div style={{ position: "relative", flex: "1 1 280px" }}>
             <Search size={15} style={{ position: "absolute", left: 12, top: "50%", transform: "translateY(-50%)", color: "var(--text-muted)" }} />
