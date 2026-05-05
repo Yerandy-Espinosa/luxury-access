@@ -15,7 +15,7 @@ export default function HomePage() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.45;
+      videoRef.current.playbackRate = 0.75;
     }
   }, []);
 
@@ -94,7 +94,7 @@ export default function HomePage() {
             height: "100%",
             objectFit: "cover",
             transform: "scale(1.06)",
-            filter: "blur(3px) brightness(0.8)",
+            filter: "blur(2px) brightness(0.8)",
             zIndex: 0,
           }}
         >
