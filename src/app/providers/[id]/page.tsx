@@ -28,15 +28,30 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
           </div>
         </div>
 
-        <div className="img-placeholder" style={{ height: 400, position: "relative" }}>
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, var(--bg) 100%)", zIndex: 1 }} />
-          <div style={{ fontSize: 80, opacity: 0.15 }}>{provider.category === "chef" ? "👨‍🍳" : "🏛️"}</div>
-          <div style={{ position: "absolute", top: 32, left: 64, zIndex: 2, padding: "6px 14px", background: "rgba(0,0,0,0.6)", border: "1px solid var(--gold-border)", color: "var(--gold)" }} className="label-caps">
+        <div style={{ height: 500, position: "relative", overflow: "hidden", background: "var(--bg-surface)" }}>
+          {provider.imageUrl ? (
+            <Image
+              src={provider.imageUrl}
+              alt={provider.name}
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          ) : (
+            <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 80, opacity: 0.15 }}>
+              {provider.category === "chef" ? "👨‍🍳" : "🏛️"}
+            </div>
+          )}
+          
+          {/* Gradients for depth and readability */}
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, transparent 40%, var(--bg) 100%)", zIndex: 1 }} />
+          
+          <div style={{ position: "absolute", top: 32, left: 64, zIndex: 2, padding: "6px 14px", background: "rgba(0,0,0,0.6)", border: "1px solid var(--gold-border)", color: "var(--gold)", backdropFilter: "blur(4px)" }} className="label-caps">
             {provider.category === "chef" ? "Private Chef" : "Luxury Villa"}
           </div>
           <div style={{ position: "absolute", bottom: 32, left: 64, zIndex: 2, display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: availColor }} />
-            <span style={{ color: "#FAF7F2", fontSize: 13, fontFamily: "Manrope", fontWeight: 600 }}>{getStatusLabel(provider.availability)}</span>
+            <span style={{ color: "#FAF7F2", fontSize: 13, fontFamily: "Manrope", fontWeight: 600, textShadow: "0 2px 4px rgba(0,0,0,0.5)" }}>{getStatusLabel(provider.availability)}</span>
           </div>
         </div>
 
