@@ -20,10 +20,10 @@ export default function HomePage() {
   ];
 
   const trustPoints = [
-    { icon: <Shield size={24} />, title: "Curated Providers", desc: "Every provider is personally vetted, invited, and approved by our team. No public sign-ups." },
-    { icon: <Lock size={24} />, title: "Anti-Leakage Protection", desc: "Phone, email, WhatsApp, and social handles remain hidden until payment is confirmed." },
-    { icon: <Zap size={24} />, title: "Fast Response", desc: "Most providers respond within 2–6 hours. Your experience begins before you even arrive." },
-    { icon: <Globe size={24} />, title: "Global Destinations", desc: "Bahamas, Maldives, Mediterranean, Caribbean, Dubai — where you are, we are." },
+    { icon: <Shield size={24} />, title: "Curated Providers", desc: "Every provider is personally vetted, invited, and approved by our team. No public sign-ups.", image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2070&auto=format&fit=crop" },
+    { icon: <Lock size={24} />, title: "Anti-Leakage Protection", desc: "Phone, email, WhatsApp, and social handles remain hidden until payment is confirmed.", image: "https://images.unsplash.com/photo-1550565118-3a14e8d0386f?q=80&w=2070&auto=format&fit=crop" },
+    { icon: <Zap size={24} />, title: "Fast Response", desc: "Most providers respond within 2–6 hours. Your experience begins before you even arrive.", image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" },
+    { icon: <Globe size={24} />, title: "Global Destinations", desc: "Bahamas, Maldives, Mediterranean, Caribbean, Dubai — where you are, we are.", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop" },
   ];
 
   const categories = [
@@ -66,8 +66,6 @@ export default function HomePage() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
           position: "relative",
           overflow: "hidden",
           paddingTop: 72,
@@ -106,7 +104,7 @@ export default function HomePage() {
           }}
         />
 
-        <div className="container-luxury" style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 64px" }}>
+        <div className="container-luxury" style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 24px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
           <div
             className="label-caps animate-fade-in"
             style={{
@@ -194,13 +192,13 @@ export default function HomePage() {
 
         <div
           style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
+            marginTop: "auto",
+            width: "100%",
             borderTop: "1px solid var(--border)",
             background: "var(--bg-surface)",
             backdropFilter: "blur(12px)",
+            position: "relative",
+            zIndex: 10,
           }}
         >
           <div
@@ -424,14 +422,20 @@ export default function HomePage() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
             {trustPoints.map((point) => (
-              <div key={point.title} style={{ padding: "40px 32px" }}>
-                <div style={{ color: "var(--gold)", marginBottom: 20 }}>{point.icon}</div>
-                <h3 style={{ fontFamily: "Noto Serif", fontSize: 20, marginBottom: 12, color: "var(--text-primary)" }}>
-                  {point.title}
-                </h3>
-                <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7 }}>
-                  {point.desc}
-                </p>
+              <div key={point.title} className="card animate-fade-in" style={{ padding: 0, overflow: "hidden", display: "flex", flexDirection: "column", border: "1px solid var(--border)" }}>
+                <div style={{ position: "relative", width: "100%", height: 200 }}>
+                  <Image src={point.image} alt={point.title} fill style={{ objectFit: "cover" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.4), transparent)" }} />
+                </div>
+                <div style={{ padding: "32px 24px", flex: 1, background: "var(--bg-surface)" }}>
+                  <div style={{ color: "var(--gold)", marginBottom: 16 }}>{point.icon}</div>
+                  <h3 style={{ fontFamily: "Noto Serif", fontSize: 18, marginBottom: 12, color: "var(--text-primary)" }}>
+                    {point.title}
+                  </h3>
+                  <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7 }}>
+                    {point.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
