@@ -17,7 +17,11 @@ export const providers: Provider[] = [
     availability: "available",
     status: "approved",
     imageUrl: "/chef_mateo.png",
-    galleryImages: ["/images/chef-mateo-1.jpg", "/images/chef-mateo-2.jpg", "/images/chef-mateo-3.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550966842-28a2a2d989ce?q=80&w=2070&auto=format&fit=crop"
+    ],
     cuisineStyle: "French Mediterranean",
     rating: 4.9,
     completedServices: 87,
@@ -38,7 +42,10 @@ export const providers: Provider[] = [
     availability: "limited",
     status: "approved",
     imageUrl: "/chef_amara.png",
-    galleryImages: ["/images/chef-amara-1.jpg", "/images/chef-amara-2.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=1974&auto=format&fit=crop"
+    ],
     cuisineStyle: "Latin Fine Dining",
     rating: 4.8,
     completedServices: 62,
@@ -59,7 +66,10 @@ export const providers: Provider[] = [
     availability: "available",
     status: "approved",
     imageUrl: "/chef_kenji.png",
-    galleryImages: ["/images/chef-kenji-1.jpg", "/images/chef-kenji-2.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?q=80&w=1974&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1579027989536-b7b1f875659b?q=80&w=2070&auto=format&fit=crop"
+    ],
     cuisineStyle: "Japanese Omakase",
     rating: 5.0,
     completedServices: 44,
@@ -80,7 +90,10 @@ export const providers: Provider[] = [
     availability: "available",
     status: "approved",
     imageUrl: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop",
-    galleryImages: ["/images/villa-marea-1.jpg", "/images/villa-marea-2.jpg", "/images/villa-marea-3.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2084&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+    ],
     bedrooms: 5,
     beachfront: true,
     staffIncluded: true,
@@ -104,7 +117,10 @@ export const providers: Provider[] = [
     availability: "limited",
     status: "approved",
     imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop",
-    galleryImages: ["/images/villa-azul-1.jpg", "/images/villa-azul-2.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+    ],
     bedrooms: 6,
     beachfront: true,
     staffIncluded: true,
@@ -128,7 +144,10 @@ export const providers: Provider[] = [
     availability: "available",
     status: "approved",
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop",
-    galleryImages: ["/images/villa-solaris-1.jpg", "/images/villa-solaris-2.jpg"],
+    galleryImages: [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=1925&auto=format&fit=crop"
+    ],
     bedrooms: 4,
     beachfront: false,
     staffIncluded: false,

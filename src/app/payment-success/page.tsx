@@ -65,7 +65,13 @@ export default function PaymentSuccessPage() {
 
             <div className="card" style={{ padding: 28 }}>
               <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 24 }}>
-                <div className="img-placeholder" style={{ width: 56, height: 56, flexShrink: 0, fontSize: 22, borderRadius: "50%" }}>👨‍🍳</div>
+                <div className="img-placeholder" style={{ width: 56, height: 56, flexShrink: 0, position: "relative", overflow: "hidden", borderRadius: "50%" }}>
+                  {provider.imageUrl ? (
+                    <Image src={provider.imageUrl} alt={provider.name} fill style={{ objectFit: "cover" }} />
+                  ) : (
+                    <span style={{ fontSize: 22 }}>👨‍🍳</span>
+                  )}
+                </div>
                 <div>
                   <div style={{ fontFamily: "Noto Serif", fontSize: 18, marginBottom: 2 }}>{provider.name}</div>
                   <div style={{ fontSize: 12, color: "var(--gold)", fontStyle: "italic" }}>{provider.cuisineStyle}</div>

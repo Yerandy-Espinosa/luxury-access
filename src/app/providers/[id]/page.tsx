@@ -1,6 +1,7 @@
 "use client";
 import { use } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Lock, MapPin, Users, Star, Clock, CheckCircle, Bed, Waves, ChefHat } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -100,12 +101,27 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
 
               <div>
                 <h2 style={{ fontFamily: "Noto Serif", fontSize: 22, marginBottom: 20 }}>Gallery</h2>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12 }}>
-                  {[1,2,3].map(i => (
-                    <div key={i} className="img-placeholder" style={{ height: 140, fontSize: 28 }}>
-                      {provider.category === "chef" ? "🍽️" : "🌊"}
-                    </div>
-                  ))}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 16 }}>
+                  {provider.galleryImages && provider.galleryImages.length > 0 ? (
+                    provider.galleryImages.map((img, i) => (
+                      <div key={i} style={{ height: 200, position: "relative", overflow: "hidden", background: "var(--bg-surface)" }}>
+                        <Image
+                          src={img}
+                          alt={`${provider.name} gallery ${i + 1}`}
+                          fill
+                          style={{ objectFit: "cover", transition: "transform 0.5s ease" }}
+                          onMouseEnter={e => (e.currentTarget.style.transform = "scale(1.05)")}
+                          onMouseLeave={e => (e.currentTarget.style.transform = "scale(1)")}
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    [1, 2, 3].map(i => (
+                      <div key={i} className="img-placeholder" style={{ height: 140, fontSize: 28 }}>
+                        {provider.category === "chef" ? "🍽️" : "🌊"}
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { useState, Suspense } from "react";
+import Image from "next/image";
 import { Lock, Shield, CreditCard, Check, ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import { mockRequests, providers } from "@/lib/mock-data";
@@ -46,8 +47,12 @@ function CheckoutContent() {
               <div className="card" style={{ padding: 28, marginBottom: 28 }}>
                 <h2 style={{ fontFamily: "Noto Serif", fontSize: 20, marginBottom: 20 }}>You&apos;re booking</h2>
                 <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
-                  <div className="img-placeholder" style={{ width: 70, height: 70, flexShrink: 0, fontSize: 24 }}>
-                    {request.category === "chef" ? "👨‍🍳" : "🏛️"}
+                  <div className="img-placeholder" style={{ width: 70, height: 70, flexShrink: 0, position: "relative", overflow: "hidden" }}>
+                    {provider?.imageUrl ? (
+                      <Image src={provider.imageUrl} alt={provider.name} fill style={{ objectFit: "cover" }} />
+                    ) : (
+                      <span style={{ fontSize: 24 }}>{request.category === "chef" ? "👨‍🍳" : "🏛️"}</span>
+                    )}
                   </div>
                   <div>
                     <div style={{ fontFamily: "Noto Serif", fontSize: 18, marginBottom: 4 }}>{provider?.name ?? "Selected Provider"}</div>

@@ -1,6 +1,7 @@
 "use client";
 import { use, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Lock, Star, MapPin, Check, ArrowRight, Clock } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -117,7 +118,13 @@ export default function RequestDetailPage({ params }: { params: Promise<{ id: st
                           }}
                         >
                           <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
-                            <div className="img-placeholder" style={{ width: 80, height: 80, flexShrink: 0, fontSize: 28 }}>👨‍🍳</div>
+                            <div className="img-placeholder" style={{ width: 80, height: 80, flexShrink: 0, position: "relative", overflow: "hidden" }}>
+                              {prov.imageUrl ? (
+                                <Image src={prov.imageUrl} alt={prov.name} fill style={{ objectFit: "cover" }} />
+                              ) : (
+                                <span style={{ fontSize: 28 }}>👨‍🍳</span>
+                              )}
+                            </div>
                             <div style={{ flex: 1 }}>
                               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4, flexWrap: "wrap" }}>
                                 <h3 style={{ fontFamily: "Noto Serif", fontSize: 18 }}>{prov.name}</h3>
