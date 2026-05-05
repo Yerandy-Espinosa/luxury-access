@@ -29,11 +29,26 @@
     "howItWorksTitle": "How Luxury Access Works",
     "howItWorksSub": "A seamless five-step journey from request to experience — with privacy protected at every stage.",
     "steps": {
-      "1": { "title": "Submit a Request", "desc": "Describe your experience — destination, dates, preferences, and budget. Takes under 5 minutes." },
-      "2": { "title": "Providers Respond", "desc": "Our curated network reviews your request. Matching providers accept or decline within hours." },
-      "3": { "title": "Review Your Options", "desc": "See who accepted. Browse their profiles, proposed menus, and pricing — all without revealing contact details." },
-      "4": { "title": "Select & Pay", "desc": "Choose your provider, confirm the booking, and complete secure payment through the platform." },
-      "5": { "title": "Contact Released", "desc": "Only after payment, direct contact information is released to both parties. Privacy guaranteed." }
+      "1": {
+        "title": "Submit a Request",
+        "desc": "Describe your experience — destination, dates, preferences, and budget. Takes under 5 minutes."
+      },
+      "2": {
+        "title": "Providers Respond",
+        "desc": "Our curated network reviews your request. Matching providers accept or decline within hours."
+      },
+      "3": {
+        "title": "Review Your Options",
+        "desc": "See who accepted. Browse their profiles, proposed menus, and pricing — all without revealing contact details."
+      },
+      "4": {
+        "title": "Select & Pay",
+        "desc": "Choose your provider, confirm the booking, and complete secure payment through the platform."
+      },
+      "5": {
+        "title": "Contact Released",
+        "desc": "Only after payment, direct contact information is released to both parties. Privacy guaranteed."
+      }
     },
     "contactLocked": "Contact released after payment only",
     "featured": "Featured Providers",
@@ -56,5 +71,27 @@
     "info": "Info",
     "rights": "© 2026 Luxury Access. All rights reserved.",
     "tagline": "A curated, invite-only marketplace"
+  },
+  "villas": {
+    "label": "Luxury Villas",
+    "title": "Private Estates & Hidden Retreats",
+    "desc": "Architectural masterpieces and secluded estates curated for absolute privacy. Beachfront, clifftop, and island retreats — each with full concierge arrangements available.",
+    "search": "Search villas...",
+    "allDestinations": "All Destinations",
+    "beachfront": "Beachfront Only",
+    "count": "villa",
+    "countPlural": "villas",
+    "noMatch": "No villas match your filters."
+  },
+  "login": {
+    "welcome": "Welcome back",
+    "selectPortal": "Select your portal to securely access the Luxury Access ecosystem.",
+    "clientTitle": "Client",
+    "clientDesc": "Book experiences & manage requests",
+    "providerTitle": "Provider",
+    "providerDesc": "Manage inquiries & view payouts",
+    "adminTitle": "Administrator",
+    "adminDesc": "Platform oversight & approvals",
+    "accessPortal": "Access Portal"
   }
 }

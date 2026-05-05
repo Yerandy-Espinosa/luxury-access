@@ -29,11 +29,26 @@
     "howItWorksTitle": "Cómo Funciona Luxury Access",
     "howItWorksSub": "Un viaje de cinco pasos sin fisuras desde la solicitud hasta la experiencia — con privacidad protegida en cada etapa.",
     "steps": {
-      "1": { "title": "Enviar una Solicitud", "desc": "Describe tu experiencia — destino, fechas, preferencias y presupuesto. Toma menos de 5 minutos." },
-      "2": { "title": "Los Proveedores Responden", "desc": "Nuestra red revisa tu solicitud. Los proveedores compatibles aceptan o rechazan en horas." },
-      "3": { "title": "Revisa tus Opciones", "desc": "Mira quién aceptó. Explora sus perfiles, menús y precios — todo sin revelar detalles de contacto." },
-      "4": { "title": "Selecciona y Paga", "desc": "Elige a tu proveedor, confirma la reserva y completa el pago de forma segura a través de la plataforma." },
-      "5": { "title": "Contacto Liberado", "desc": "Solo después del pago, la información de contacto directo se libera para ambas partes. Privacidad garantizada." }
+      "1": {
+        "title": "Enviar una Solicitud",
+        "desc": "Describe tu experiencia — destino, fechas, preferencias y presupuesto. Toma menos de 5 minutos."
+      },
+      "2": {
+        "title": "Los Proveedores Responden",
+        "desc": "Nuestra red revisa tu solicitud. Los proveedores compatibles aceptan o rechazan en horas."
+      },
+      "3": {
+        "title": "Revisa tus Opciones",
+        "desc": "Mira quién aceptó. Explora sus perfiles, menús y precios — todo sin revelar detalles de contacto."
+      },
+      "4": {
+        "title": "Selecciona y Paga",
+        "desc": "Elige a tu proveedor, confirma la reserva y completa el pago de forma segura a través de la plataforma."
+      },
+      "5": {
+        "title": "Contacto Liberado",
+        "desc": "Solo después del pago, la información de contacto directo se libera para ambas partes. Privacidad garantizada."
+      }
     },
     "contactLocked": "Contacto liberado solo después del pago",
     "featured": "Proveedores Destacados",
@@ -56,5 +71,27 @@
     "info": "Información",
     "rights": "© 2026 Luxury Access. Todos los derechos reservados.",
     "tagline": "Un mercado exclusivo y curado"
+  },
+  "villas": {
+    "label": "Villas de Lujo",
+    "title": "Fincas Privadas y Refugios Ocultos",
+    "desc": "Obras maestras arquitectónicas y fincas aisladas diseñadas para absoluta privacidad. Frente a la playa, en acantilados e islas — todas con servicio de conserjería completo disponible.",
+    "search": "Buscar villas...",
+    "allDestinations": "Todos los destinos",
+    "beachfront": "Solo frente a la playa",
+    "count": "villa",
+    "countPlural": "villas",
+    "noMatch": "Ninguna villa coincide con los filtros."
+  },
+  "login": {
+    "welcome": "Bienvenido de nuevo",
+    "selectPortal": "Selecciona tu portal para acceder de forma segura al ecosistema de Luxury Access.",
+    "clientTitle": "Cliente",
+    "clientDesc": "Reserva experiencias y gestiona solicitudes",
+    "providerTitle": "Proveedor",
+    "providerDesc": "Gestiona consultas y pagos",
+    "adminTitle": "Administrador",
+    "adminDesc": "Supervisión y aprobaciones",
+    "accessPortal": "Acceder al Portal"
   }
 }

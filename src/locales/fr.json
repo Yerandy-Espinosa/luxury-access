@@ -29,11 +29,26 @@
     "howItWorksTitle": "Comment fonctionne Luxury Access",
     "howItWorksSub": "Un voyage en cinq étapes de la demande à l'expérience — avec la confidentialité protégée à chaque étape.",
     "steps": {
-      "1": { "title": "Soumettre une Demande", "desc": "Décrivez votre expérience — destination, dates, préférences et budget. Prend moins de 5 minutes." },
-      "2": { "title": "Les Prestataires Répondent", "desc": "Notre réseau examine votre demande. Les prestataires correspondants acceptent ou déclinent en quelques heures." },
-      "3": { "title": "Examinez vos Options", "desc": "Voyez qui a accepté. Parcourez leurs profils, menus et prix — sans révéler les coordonnées." },
-      "4": { "title": "Sélectionnez et Payez", "desc": "Choisissez votre prestataire, confirmez la réservation et effectuez le paiement en toute sécurité via la plateforme." },
-      "5": { "title": "Contact Libéré", "desc": "Seulement après le paiement, les informations de contact direct sont libérées pour les deux parties. Confidentialité garantie." }
+      "1": {
+        "title": "Soumettre une Demande",
+        "desc": "Décrivez votre expérience — destination, dates, préférences et budget. Prend moins de 5 minutes."
+      },
+      "2": {
+        "title": "Les Prestataires Répondent",
+        "desc": "Notre réseau examine votre demande. Les prestataires correspondants acceptent ou déclinent en quelques heures."
+      },
+      "3": {
+        "title": "Examinez vos Options",
+        "desc": "Voyez qui a accepté. Parcourez leurs profils, menus et prix — sans révéler les coordonnées."
+      },
+      "4": {
+        "title": "Sélectionnez et Payez",
+        "desc": "Choisissez votre prestataire, confirmez la réservation et effectuez le paiement en toute sécurité via la plateforme."
+      },
+      "5": {
+        "title": "Contact Libéré",
+        "desc": "Seulement après le paiement, les informations de contact direct sont libérées pour les deux parties. Confidentialité garantie."
+      }
     },
     "contactLocked": "Contact libéré après paiement uniquement",
     "featured": "Prestataires Recommandés",
@@ -56,5 +71,27 @@
     "info": "Infos",
     "rights": "© 2026 Luxury Access. Tous droits réservés.",
     "tagline": "Un marché exclusif sur invitation"
+  },
+  "villas": {
+    "label": "Villas de Luxe",
+    "title": "Domaines Privés & Retraites Cachées",
+    "desc": "Chefs-d'œuvre architecturaux et domaines isolés conçus pour une intimité absolue. En bord de mer, sur des falaises ou sur des îles — tous avec des services de conciergerie complets disponibles.",
+    "search": "Rechercher des villas...",
+    "allDestinations": "Toutes les destinations",
+    "beachfront": "Bord de mer uniquement",
+    "count": "villa",
+    "countPlural": "villas",
+    "noMatch": "Aucune villa ne correspond à vos filtres."
+  },
+  "login": {
+    "welcome": "Bon retour",
+    "selectPortal": "Sélectionnez votre portail pour accéder en toute sécurité à l'écosystème Luxury Access.",
+    "clientTitle": "Client",
+    "clientDesc": "Réservez des expériences et gérez les demandes",
+    "providerTitle": "Fournisseur",
+    "providerDesc": "Gérez les demandes et les paiements",
+    "adminTitle": "Administrateur",
+    "adminDesc": "Supervision de la plateforme et approbations",
+    "accessPortal": "Accéder au Portail"
   }
 }

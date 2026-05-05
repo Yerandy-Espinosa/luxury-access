@@ -4,35 +4,38 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { User, Shield, ChefHat, ArrowRight } from "lucide-react";
 import Image from "next/image";
-
-const roles = [
-  {
-    id: "client",
-    title: "Client",
-    description: "Book experiences & manage requests",
-    icon: User,
-    href: "/", // For MVP, clients just stay on the site or go to a client-dashboard if it existed
-    color: "var(--text-primary)"
-  },
-  {
-    id: "provider",
-    title: "Provider",
-    description: "Manage inquiries & view payouts",
-    icon: ChefHat,
-    href: "/provider-dashboard",
-    color: "var(--gold)"
-  },
-  {
-    id: "admin",
-    title: "Administrator",
-    description: "Platform oversight & approvals",
-    icon: Shield,
-    href: "/admin",
-    color: "var(--text-secondary)"
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LoginPage() {
+  const { t } = useLanguage();
+
+  const roles = [
+    {
+      id: "client",
+      title: t("login.clientTitle"),
+      description: t("login.clientDesc"),
+      icon: User,
+      href: "/",
+      color: "var(--text-primary)"
+    },
+    {
+      id: "provider",
+      title: t("login.providerTitle"),
+      description: t("login.providerDesc"),
+      icon: ChefHat,
+      href: "/provider-dashboard",
+      color: "var(--gold)"
+    },
+    {
+      id: "admin",
+      title: t("login.adminTitle"),
+      description: t("login.adminDesc"),
+      icon: Shield,
+      href: "/admin",
+      color: "var(--text-secondary)"
+    }
+  ];
+
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", background: "var(--bg-main)" }}>
       {/* Header */}
@@ -70,7 +73,7 @@ export default function LoginPage() {
                 marginBottom: 16
               }}
             >
-              Welcome back
+              {t("login.welcome")}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -78,7 +81,7 @@ export default function LoginPage() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               style={{ color: "var(--text-secondary)", fontSize: 16, fontFamily: "Manrope", maxWidth: 400, margin: "0 auto" }}
             >
-              Select your portal to securely access the Luxury Access ecosystem.
+              {t("login.selectPortal")}
             </motion.p>
           </div>
 
@@ -118,7 +121,7 @@ export default function LoginPage() {
                       </p>
                       
                       <div style={{ marginTop: "auto", display: "flex", alignItems: "center", gap: 8, color: "var(--gold)", fontSize: 13, fontWeight: 600, fontFamily: "Manrope", textTransform: "uppercase", letterSpacing: "0.1em" }}>
-                        Access Portal <ArrowRight size={14} />
+                        {t("login.accessPortal")} <ArrowRight size={14} />
                       </div>
                     </motion.div>
                   </Link>

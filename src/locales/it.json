@@ -29,11 +29,26 @@
     "howItWorksTitle": "Come funziona Luxury Access",
     "howItWorksSub": "Un viaggio di cinque passi dalla richiesta all'esperienza — con la privacy protetta in ogni fase.",
     "steps": {
-      "1": { "title": "Invia una Richiesta", "desc": "Descrivi la tua esperienza — destinazione, date, preferenze e budget. Richiede meno di 5 minuti." },
-      "2": { "title": "I Fornitori Rispondono", "desc": "La nostra rete esamina la tua richiesta. I fornitori compatibili accettano o rifiutano in poche ore." },
-      "3": { "title": "Esamina le tue Opzioni", "desc": "Guarda chi ha accettato. Sfoglia i loro profili, menu e prezzi — tutto senza rivelare i dettagli di contatto." },
-      "4": { "title": "Seleziona e Paga", "desc": "Scegli il tuo fornitore, conferma la prenotazione ed effettua il pagamento in modo sicuro tramite la piattaforma." },
-      "5": { "title": "Contatto Rilasciato", "desc": "Solo dopo il pagamento, le informazioni di contatto diretto vengono rilasciate a entrambe le parti. Privacy garantita." }
+      "1": {
+        "title": "Invia una Richiesta",
+        "desc": "Descrivi la tua esperienza — destinazione, date, preferenze e budget. Richiede meno di 5 minuti."
+      },
+      "2": {
+        "title": "I Fornitori Rispondono",
+        "desc": "La nostra rete esamina la tua richiesta. I fornitori compatibili accettano o rifiutano in poche ore."
+      },
+      "3": {
+        "title": "Esamina le tue Opzioni",
+        "desc": "Guarda chi ha accettato. Sfoglia i loro profili, menu e prezzi — tutto senza rivelare i dettagli di contatto."
+      },
+      "4": {
+        "title": "Seleziona e Paga",
+        "desc": "Scegli il tuo fornitore, conferma la prenotazione ed effettua il pagamento in modo sicuro tramite la piattaforma."
+      },
+      "5": {
+        "title": "Contatto Rilasciato",
+        "desc": "Solo dopo il pagamento, le informazioni di contatto diretto vengono rilasciate a entrambe le parti. Privacy garantita."
+      }
     },
     "contactLocked": "Contatto rilasciato solo dopo il pagamento",
     "featured": "Fornitori in Evidenza",
@@ -56,5 +71,27 @@
     "info": "Informazioni",
     "rights": "© 2026 Luxury Access. Tutti i diritti riservati.",
     "tagline": "Un mercato esclusivo su invito"
+  },
+  "villas": {
+    "label": "Ville di Lusso",
+    "title": "Tenute Private & Ritiri Nascosti",
+    "desc": "Capolavori architettonici e tenute isolate curate per la privacy assoluta. Sulla spiaggia, sulla scogliera e sulle isole — ciascuna con un servizio di concierge completo.",
+    "search": "Cerca ville...",
+    "allDestinations": "Tutte le destinazioni",
+    "beachfront": "Solo sulla spiaggia",
+    "count": "villa",
+    "countPlural": "ville",
+    "noMatch": "Nessuna villa corrisponde ai filtri."
+  },
+  "login": {
+    "welcome": "Bentornato",
+    "selectPortal": "Seleziona il tuo portale per accedere in sicurezza all'ecosistema Luxury Access.",
+    "clientTitle": "Cliente",
+    "clientDesc": "Prenota esperienze e gestisci le richieste",
+    "providerTitle": "Fornitore",
+    "providerDesc": "Gestisci richieste e pagamenti",
+    "adminTitle": "Amministratore",
+    "adminDesc": "Supervisione della piattaforma e approvazioni",
+    "accessPortal": "Accedi al Portale"
   }
 }
