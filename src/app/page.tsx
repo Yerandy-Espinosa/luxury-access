@@ -1,4 +1,5 @@
 "use client";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Lock, ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react";
@@ -10,6 +11,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HomePage() {
   const { t } = useLanguage();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.45;
+    }
+  }, []);
 
   const howItWorks = [
     { step: "01", title: t("home.steps.1.title"), desc: t("home.steps.1.desc") },
@@ -71,35 +79,55 @@ export default function HomePage() {
           paddingTop: 72,
         }}
       >
+        {/* Background Video */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "scale(1.06)",
+            filter: "blur(3px) brightness(0.8)",
+            zIndex: 0,
+          }}
+        >
+          <source src="/hvideo.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlays */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `
-              linear-gradient(var(--gold-muted) 1px, transparent 1px),
-              linear-gradient(90deg, var(--gold-muted) 1px, transparent 1px)
-            `,
-            backgroundSize: "80px 80px",
-            opacity: 0.3,
+            background: "linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.4) 50%, rgba(13,13,13,0.8) 100%)",
+            zIndex: 1,
           }}
         />
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, var(--bg) 100%)",
+            background: "radial-gradient(circle at center, transparent 20%, rgba(13,13,13,0.6) 100%)",
+            zIndex: 1,
           }}
         />
+        {/* Watermark mask (bottom-right dark vignette) */}
         <div
           style={{
             position: "absolute",
-            top: "20%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            width: 600,
-            height: 600,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(196,162,101,0.06) 0%, transparent 70%)",
+            bottom: 0,
+            right: 0,
+            width: "40%",
+            height: "40%",
+            background: "radial-gradient(circle at bottom right, rgba(13,13,13,0.95) 0%, transparent 70%)",
+            zIndex: 1,
             pointerEvents: "none",
           }}
         />
