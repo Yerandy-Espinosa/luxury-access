@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "chefs": "Private Chefs",
+    "villas": "Villas",
+    "howItWorks": "How It Works",
+    "login": "Login",
+    "startRequest": "Start a Request"
+  },
+  "home": {
+    "inviteOnly": "Invite-Only Marketplace",
+    "heroTitle1": "Unlock",
+    "heroTitle2": "Extraordinary",
+    "heroTitle3": "Experiences",
+    "heroSubtitle": "Private chefs. Curated villas. Bespoke hospitality experiences—delivered to the world's most exclusive destinations with complete contact privacy.",
+    "exploreProviders": "Explore Providers",
+    "discover": "Discover",
+    "stats": {
+      "providers": "Curated Providers",
+      "destinations": "Destinations",
+      "response": "Avg Response",
+      "protected": "Contact Protected"
+    },
+    "bespoke": "Bespoke Services",
+    "curated": "Curated for the Discerning Few",
+    "marketplace": "Our marketplace focuses on two pillars of luxury hospitality — with more experiences coming soon.",
+    "comingSoon": "Coming Soon",
+    "explore": "Explore",
+    "process": "The Process",
+    "howItWorksTitle": "How Luxury Access Works",
+    "howItWorksSub": "A seamless five-step journey from request to experience — with privacy protected at every stage.",
+    "steps": {
+      "1": { "title": "Submit a Request", "desc": "Describe your experience — destination, dates, preferences, and budget. Takes under 5 minutes." },
+      "2": { "title": "Providers Respond", "desc": "Our curated network reviews your request. Matching providers accept or decline within hours." },
+      "3": { "title": "Review Your Options", "desc": "See who accepted. Browse their profiles, proposed menus, and pricing — all without revealing contact details." },
+      "4": { "title": "Select & Pay", "desc": "Choose your provider, confirm the booking, and complete secure payment through the platform." },
+      "5": { "title": "Contact Released", "desc": "Only after payment, direct contact information is released to both parties. Privacy guaranteed." }
+    },
+    "contactLocked": "Contact released after payment only",
+    "featured": "Featured Providers",
+    "meetNetwork": "Meet Our Curated Network",
+    "viewAll": "View All Providers",
+    "protection": {
+      "title": "Contact Protection Active",
+      "desc": "Provider phone numbers, email addresses, Instagram handles, and websites are hidden on all profiles. They are released exclusively after a confirmed, paid booking through this platform."
+    },
+    "trust": "Why Luxury Access",
+    "builtFor": "Built for the Exceptional",
+    "ready": "Ready for an Extraordinary Experience?",
+    "submit": "Submit your first request in minutes. We'll handle the rest."
+  },
+  "footer": {
+    "desc": "Curated stays. Private dining. Seamless access.\nConnecting discerning clients with the world's finest private chefs and luxury properties.",
+    "locked": "🔒 Contact protected until payment",
+    "services": "Services",
+    "platform": "Platform",
+    "info": "Info",
+    "rights": "© 2026 Luxury Access. All rights reserved.",
+    "tagline": "A curated, invite-only marketplace"
+  }
+}

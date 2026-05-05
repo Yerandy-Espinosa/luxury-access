@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "chefs": "Chefs Privés",
+    "villas": "Villas",
+    "howItWorks": "Comment ça marche",
+    "login": "Connexion",
+    "startRequest": "Faire une demande"
+  },
+  "home": {
+    "inviteOnly": "Marché sur invitation",
+    "heroTitle1": "Débloquez des",
+    "heroTitle2": "Expériences",
+    "heroTitle3": "Extraordinaires",
+    "heroSubtitle": "Chefs privés. Villas sélectionnées. Expériences d'hospitalité sur mesure—livrées dans les destinations les plus exclusives du monde avec une confidentialité totale.",
+    "exploreProviders": "Explorer les Prestataires",
+    "discover": "Découvrir",
+    "stats": {
+      "providers": "Prestataires Sélectionnés",
+      "destinations": "Destinations",
+      "response": "Temps de Réponse",
+      "protected": "Contact Protégé"
+    },
+    "bespoke": "Services sur Mesure",
+    "curated": "Sélectionné pour les Plus Exigeants",
+    "marketplace": "Notre marché se concentre sur deux piliers de l'hospitalité de luxe — avec plus d'expériences à venir.",
+    "comingSoon": "Bientôt Disponible",
+    "explore": "Explorer",
+    "process": "Le Processus",
+    "howItWorksTitle": "Comment fonctionne Luxury Access",
+    "howItWorksSub": "Un voyage en cinq étapes de la demande à l'expérience — avec la confidentialité protégée à chaque étape.",
+    "steps": {
+      "1": { "title": "Soumettre une Demande", "desc": "Décrivez votre expérience — destination, dates, préférences et budget. Prend moins de 5 minutes." },
+      "2": { "title": "Les Prestataires Répondent", "desc": "Notre réseau examine votre demande. Les prestataires correspondants acceptent ou déclinent en quelques heures." },
+      "3": { "title": "Examinez vos Options", "desc": "Voyez qui a accepté. Parcourez leurs profils, menus et prix — sans révéler les coordonnées." },
+      "4": { "title": "Sélectionnez et Payez", "desc": "Choisissez votre prestataire, confirmez la réservation et effectuez le paiement en toute sécurité via la plateforme." },
+      "5": { "title": "Contact Libéré", "desc": "Seulement après le paiement, les informations de contact direct sont libérées pour les deux parties. Confidentialité garantie." }
+    },
+    "contactLocked": "Contact libéré après paiement uniquement",
+    "featured": "Prestataires Recommandés",
+    "meetNetwork": "Découvrez Notre Réseau",
+    "viewAll": "Voir Tous les Prestataires",
+    "protection": {
+      "title": "Protection des Contacts Active",
+      "desc": "Les numéros de téléphone, e-mails, Instagram et sites web des prestataires sont masqués. Ils sont libérés exclusivement après une réservation confirmée et payée via cette plateforme."
+    },
+    "trust": "Pourquoi Luxury Access",
+    "builtFor": "Construit pour l'Exceptionnel",
+    "ready": "Prêt pour une Expérience Extraordinaire ?",
+    "submit": "Soumettez votre première demande en quelques minutes. Nous nous occupons du reste."
+  },
+  "footer": {
+    "desc": "Séjours sélectionnés. Dîners privés. Accès transparent.\nConnecter les clients exigeants avec les meilleurs chefs privés et propriétés de luxe du monde.",
+    "locked": "🔒 Contact protégé jusqu'au paiement",
+    "services": "Services",
+    "platform": "Plateforme",
+    "info": "Infos",
+    "rights": "© 2026 Luxury Access. Tous droits réservés.",
+    "tagline": "Un marché exclusif sur invitation"
+  }
+}

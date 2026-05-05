@@ -1,32 +1,34 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-// Removed unused icons
-
-const footerLinks = {
-  Services: [
-    { label: "Private Chefs", href: "/chefs" },
-    { label: "Luxury Villas", href: "/villas" },
-    { label: "Yachts (Coming Soon)", href: "#" },
-  ],
-  Platform: [
-    { label: "How It Works", href: "/#how-it-works" },
-    { label: "Start a Request", href: "/request" },
-    { label: "Provider Onboarding", href: "/onboarding" },
-  ],
-  Info: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Contact Us", href: "#" },
-  ],
-};
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
+  const footerLinks = {
+    [t("footer.services")]: [
+      { label: t("nav.chefs"), href: "/chefs" },
+      { label: t("nav.villas"), href: "/villas" },
+      { label: "Yachts (Coming Soon)", href: "#" },
+    ],
+    [t("footer.platform")]: [
+      { label: t("nav.howItWorks"), href: "/#how-it-works" },
+      { label: t("nav.startRequest"), href: "/request" },
+      { label: "Provider Onboarding", href: "/onboarding" },
+    ],
+    [t("footer.info")]: [
+      { label: "Privacy Policy", href: "#" },
+      { label: "Terms of Service", href: "#" },
+      { label: "Contact Us", href: "#" },
+    ],
+  };
+
   return (
     <footer style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border)", marginTop: "auto" }}>
       <div className="container-luxury" style={{ paddingTop: 64, paddingBottom: 64 }}>
         {/* Top Row */}
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 48, marginBottom: 48 }} className="footer-grid">
           {/* Brand */}
           <div>
             <Image
@@ -37,10 +39,8 @@ export default function Footer() {
               className="logo-dynamic"
               style={{ objectFit: "contain", height: 40, width: "auto", marginBottom: 16 }}
             />
-            <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7, maxWidth: 280, marginBottom: 24 }}>
-              Curated stays. Private dining. Seamless access.
-              <br />
-              Connecting discerning clients with the world&apos;s finest private chefs and luxury properties.
+            <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7, maxWidth: 280, marginBottom: 24, whiteSpace: "pre-line" }}>
+              {t("footer.desc")}
             </p>
             {/* Anti-leakage note */}
             <div
@@ -59,7 +59,7 @@ export default function Footer() {
                 textTransform: "uppercase",
               }}
             >
-              🔒 Contact protected until payment
+              {t("footer.locked")}
             </div>
           </div>
 

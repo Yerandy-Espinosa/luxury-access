@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "chefs": "Chef Privati",
+    "villas": "Ville",
+    "howItWorks": "Come Funziona",
+    "login": "Accedi",
+    "startRequest": "Inizia una Richiesta"
+  },
+  "home": {
+    "inviteOnly": "Mercato su Invito",
+    "heroTitle1": "Sblocca",
+    "heroTitle2": "Esperienze",
+    "heroTitle3": "Straordinarie",
+    "heroSubtitle": "Chef privati. Ville curate. Esperienze di ospitalità su misura—consegnate nelle destinazioni più esclusive del mondo con totale privacy dei contatti.",
+    "exploreProviders": "Esplora i Fornitori",
+    "discover": "Scopri",
+    "stats": {
+      "providers": "Fornitori Selezionati",
+      "destinations": "Destinazioni",
+      "response": "Tempo di Risposta",
+      "protected": "Contatto Protetto"
+    },
+    "bespoke": "Servizi su Misura",
+    "curated": "Curato per i Pochi Esigenti",
+    "marketplace": "Il nostro mercato si concentra su due pilastri dell'ospitalità di lusso — con più esperienze in arrivo.",
+    "comingSoon": "Prossimamente",
+    "explore": "Esplora",
+    "process": "Il Processo",
+    "howItWorksTitle": "Come funziona Luxury Access",
+    "howItWorksSub": "Un viaggio di cinque passi dalla richiesta all'esperienza — con la privacy protetta in ogni fase.",
+    "steps": {
+      "1": { "title": "Invia una Richiesta", "desc": "Descrivi la tua esperienza — destinazione, date, preferenze e budget. Richiede meno di 5 minuti." },
+      "2": { "title": "I Fornitori Rispondono", "desc": "La nostra rete esamina la tua richiesta. I fornitori compatibili accettano o rifiutano in poche ore." },
+      "3": { "title": "Esamina le tue Opzioni", "desc": "Guarda chi ha accettato. Sfoglia i loro profili, menu e prezzi — tutto senza rivelare i dettagli di contatto." },
+      "4": { "title": "Seleziona e Paga", "desc": "Scegli il tuo fornitore, conferma la prenotazione ed effettua il pagamento in modo sicuro tramite la piattaforma." },
+      "5": { "title": "Contatto Rilasciato", "desc": "Solo dopo il pagamento, le informazioni di contatto diretto vengono rilasciate a entrambe le parti. Privacy garantita." }
+    },
+    "contactLocked": "Contatto rilasciato solo dopo il pagamento",
+    "featured": "Fornitori in Evidenza",
+    "meetNetwork": "Incontra la Nostra Rete",
+    "viewAll": "Vedi Tutti i Fornitori",
+    "protection": {
+      "title": "Protezione dei Contatti Attiva",
+      "desc": "Numeri di telefono, e-mail, Instagram e siti web dei fornitori sono nascosti. Vengono rilasciati esclusivamente dopo una prenotazione confermata e pagata tramite questa piattaforma."
+    },
+    "trust": "Perché Luxury Access",
+    "builtFor": "Costruito per l'Eccezionale",
+    "ready": "Pronto per un'Esperienza Straordinaria?",
+    "submit": "Invia la tua prima richiesta in pochi minuti. Pensiamo noi al resto."
+  },
+  "footer": {
+    "desc": "Soggiorni curati. Cene private. Accesso senza interruzioni.\nCollegare i clienti esigenti con i migliori chef privati e proprietà di lusso del mondo.",
+    "locked": "🔒 Contatto protetto fino al pagamento",
+    "services": "Servizi",
+    "platform": "Piattaforma",
+    "info": "Informazioni",
+    "rights": "© 2026 Luxury Access. Tutti i diritti riservati.",
+    "tagline": "Un mercato esclusivo su invito"
+  }
+}

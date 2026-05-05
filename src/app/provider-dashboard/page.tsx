@@ -57,7 +57,9 @@ export default function ProviderDashboardPage() {
 
         <div style={{ padding: "16px 24px", borderTop: "1px solid var(--border)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div className="img-placeholder" style={{ width: 32, height: 32, borderRadius: "50%", flexShrink: 0, fontSize: 14 }}>👨‍🍳</div>
+            <div style={{ width: 32, height: 32, borderRadius: "50%", overflow: "hidden", flexShrink: 0, position: "relative" }}>
+              <Image src={providerProfile.imageUrl!} alt={providerProfile.name} fill style={{ objectFit: "cover" }} />
+            </div>
             <div>
               <div style={{ fontSize: 13, fontWeight: 600, color: "var(--text-primary)" }}>Chef Mateo</div>
               <span className="badge badge-success" style={{ fontSize: 9, padding: "2px 6px" }}>Approved</span>

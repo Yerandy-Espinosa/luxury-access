@@ -2,19 +2,21 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
 import ThemeToggle from "@/components/ThemeToggle";
-
-const navLinks = [
-  { label: "Private Chefs", href: "/chefs" },
-  { label: "Villas", href: "/villas" },
-  { label: "How It Works", href: "/#how-it-works" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t("nav.chefs"), href: "/chefs" },
+    { label: t("nav.villas"), href: "/villas" },
+    { label: t("nav.howItWorks"), href: "/#how-it-works" },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -84,17 +86,54 @@ export default function Navbar() {
 
         {/* Desktop Actions */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }} className="hide-mobile">
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <Globe size={14} color="var(--text-muted)" />
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value as Language)}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "var(--text-muted)",
+                fontSize: 11,
+                fontFamily: "Manrope",
+                textTransform: "uppercase",
+                letterSpacing: "0.05em",
+                fontWeight: 600,
+                cursor: "pointer",
+                outline: "none"
+              }}
+            >
+              <option value="en">EN</option>
+              <option value="es">ES</option>
+              <option value="fr">FR</option>
+              <option value="it">IT</option>
+            </select>
+          </div>
           <ThemeToggle />
           <Link href="/login" className="label-caps" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Login
+            {t("nav.login")}
           </Link>
           <Link href="/request" className="btn btn-primary" style={{ textDecoration: "none" }}>
-            Start a Request
+            {t("nav.startRequest")}
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="hide-desktop">
+          <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+            <Globe size={14} color="var(--text-muted)" />
+            <select
+              value={language}
+              onChange={(e) => setLanguage(e.target.value as Language)}
+              style={{ background: "transparent", border: "none", color: "var(--text-muted)", fontSize: 11, outline: "none" }}
+            >
+              <option value="en">EN</option>
+              <option value="es">ES</option>
+              <option value="fr">FR</option>
+              <option value="it">IT</option>
+            </select>
+          </div>
           <ThemeToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -130,10 +169,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link href="/login" className="label-caps" onClick={() => setMenuOpen(false)} style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Login
+            {t("nav.login")}
           </Link>
           <Link href="/request" className="btn btn-primary" onClick={() => setMenuOpen(false)} style={{ textDecoration: "none", textAlign: "center" }}>
-            Start a Request
+            {t("nav.startRequest")}
           </Link>
         </div>
       )}

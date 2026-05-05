@@ -1,58 +1,61 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Lock, ArrowRight, Shield, Zap, Globe, Star, ChevronDown, Check } from "lucide-react";
+import { Lock, ArrowRight, Shield, Zap, Globe, ChevronDown } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ProviderCard from "@/components/ProviderCard";
 import { providers } from "@/lib/mock-data";
-
-const howItWorks = [
-  { step: "01", title: "Submit a Request", desc: "Describe your experience — destination, dates, preferences, and budget. Takes under 5 minutes." },
-  { step: "02", title: "Providers Respond", desc: "Our curated network reviews your request. Matching providers accept or decline within hours." },
-  { step: "03", title: "Review Your Options", desc: "See who accepted. Browse their profiles, proposed menus, and pricing — all without revealing contact details." },
-  { step: "04", title: "Select & Pay", desc: "Choose your provider, confirm the booking, and complete secure payment through the platform." },
-  { step: "05", title: "Contact Released", desc: "Only after payment, direct contact information is released to both parties. Privacy guaranteed." },
-];
-
-const trustPoints = [
-  { icon: <Shield size={24} />, title: "Curated Providers", desc: "Every provider is personally vetted, invited, and approved by our team. No public sign-ups." },
-  { icon: <Lock size={24} />, title: "Anti-Leakage Protection", desc: "Phone, email, WhatsApp, and social handles remain hidden until payment is confirmed." },
-  { icon: <Zap size={24} />, title: "Fast Response", desc: "Most providers respond within 2–6 hours. Your experience begins before you even arrive." },
-  { icon: <Globe size={24} />, title: "Global Destinations", desc: "Bahamas, Maldives, Mediterranean, Caribbean, Dubai — where you are, we are." },
-];
-
-const categories = [
-  {
-    id: "chef",
-    label: "Private Chefs",
-    desc: "Award-winning culinary talent brought directly to your table — from Michelin-trained masters to regional specialists.",
-    href: "/chefs",
-    emoji: "🍽️",
-    detail: "Mediterranean · French · Japanese · Latin",
-  },
-  {
-    id: "villa",
-    label: "Luxury Villas",
-    desc: "Architectural masterpieces and hidden retreats curated for absolute privacy and world-class comfort.",
-    href: "/villas",
-    emoji: "🏛️",
-    detail: "Beachfront · Full Staff · Ultra-Luxury",
-  },
-  {
-    id: "soon",
-    label: "Yachts",
-    desc: "Private yacht charters and maritime experiences. Coming soon to the platform.",
-    href: "#",
-    emoji: "⛵",
-    detail: "Coming Soon",
-    soon: true,
-  },
-];
-
-const featured = providers.slice(0, 3);
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HomePage() {
+  const { t } = useLanguage();
+
+  const howItWorks = [
+    { step: "01", title: t("home.steps.1.title"), desc: t("home.steps.1.desc") },
+    { step: "02", title: t("home.steps.2.title"), desc: t("home.steps.2.desc") },
+    { step: "03", title: t("home.steps.3.title"), desc: t("home.steps.3.desc") },
+    { step: "04", title: t("home.steps.4.title"), desc: t("home.steps.4.desc") },
+    { step: "05", title: t("home.steps.5.title"), desc: t("home.steps.5.desc") },
+  ];
+
+  const trustPoints = [
+    { icon: <Shield size={24} />, title: "Curated Providers", desc: "Every provider is personally vetted, invited, and approved by our team. No public sign-ups." },
+    { icon: <Lock size={24} />, title: "Anti-Leakage Protection", desc: "Phone, email, WhatsApp, and social handles remain hidden until payment is confirmed." },
+    { icon: <Zap size={24} />, title: "Fast Response", desc: "Most providers respond within 2–6 hours. Your experience begins before you even arrive." },
+    { icon: <Globe size={24} />, title: "Global Destinations", desc: "Bahamas, Maldives, Mediterranean, Caribbean, Dubai — where you are, we are." },
+  ];
+
+  const categories = [
+    {
+      id: "chef",
+      label: "Private Chefs",
+      desc: "Award-winning culinary talent brought directly to your table — from Michelin-trained masters to regional specialists.",
+      href: "/chefs",
+      image: "/service_chefs.png",
+      detail: "Mediterranean · French · Japanese · Latin",
+    },
+    {
+      id: "villa",
+      label: "Luxury Villas",
+      desc: "Architectural masterpieces and hidden retreats curated for absolute privacy and world-class comfort.",
+      href: "/villas",
+      image: "/service_villas.png",
+      detail: "Beachfront · Full Staff · Ultra-Luxury",
+    },
+    {
+      id: "soon",
+      label: "Yachts",
+      desc: "Private yacht charters and maritime experiences. Coming soon to the platform.",
+      href: "#",
+      image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=2070&auto=format&fit=crop",
+      detail: t("home.comingSoon"),
+      soon: true,
+    },
+  ];
+
+  const featured = providers.slice(0, 3);
+
   return (
     <div style={{ background: "var(--bg)", minHeight: "100vh" }}>
       <Navbar />
@@ -70,7 +73,6 @@ export default function HomePage() {
           paddingTop: 72,
         }}
       >
-        {/* Background grid */}
         <div
           style={{
             position: "absolute",
@@ -83,7 +85,6 @@ export default function HomePage() {
             opacity: 0.3,
           }}
         />
-        {/* Radial vignette */}
         <div
           style={{
             position: "absolute",
@@ -91,7 +92,6 @@ export default function HomePage() {
             background: "radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, var(--bg) 100%)",
           }}
         />
-        {/* Gold orb */}
         <div
           style={{
             position: "absolute",
@@ -106,16 +106,7 @@ export default function HomePage() {
           }}
         />
 
-        <div
-          className="container-luxury"
-          style={{
-            position: "relative",
-            zIndex: 2,
-            textAlign: "center",
-            padding: "80px 64px",
-          }}
-        >
-          {/* Pre-title */}
+        <div className="container-luxury" style={{ position: "relative", zIndex: 2, textAlign: "center", padding: "80px 64px" }}>
           <div
             className="label-caps animate-fade-in"
             style={{
@@ -129,10 +120,9 @@ export default function HomePage() {
               background: "var(--gold-muted)",
             }}
           >
-            <Lock size={12} /> Invite-Only Marketplace
+            <Lock size={12} /> {t("home.inviteOnly")}
           </div>
 
-          {/* Headline */}
           <h1
             className="display animate-slide-up"
             style={{
@@ -144,12 +134,11 @@ export default function HomePage() {
               opacity: 0,
             }}
           >
-            Unlock{" "}
-            <span className="text-gold-gradient">Extraordinary</span>
-            <br />Experiences
+            {t("home.heroTitle1")}{" "}
+            <span className="text-gold-gradient">{t("home.heroTitle2")}</span>
+            <br />{t("home.heroTitle3")}
           </h1>
 
-          {/* Subheadline */}
           <p
             className="animate-slide-up"
             style={{
@@ -162,11 +151,9 @@ export default function HomePage() {
               opacity: 0,
             }}
           >
-            Private chefs. Curated villas. Bespoke hospitality experiences—delivered
-            to the world&apos;s most exclusive destinations with complete contact privacy.
+            {t("home.heroSubtitle")}
           </p>
 
-          {/* CTAs */}
           <div
             className="animate-slide-up"
             style={{
@@ -179,14 +166,13 @@ export default function HomePage() {
             }}
           >
             <Link href="/request" className="btn btn-primary btn-lg" style={{ textDecoration: "none" }}>
-              Start a Request <ArrowRight size={16} />
+              {t("nav.startRequest")} <ArrowRight size={16} />
             </Link>
             <Link href="/chefs" className="btn btn-ghost btn-lg" style={{ textDecoration: "none" }}>
-              Explore Providers
+              {t("home.exploreProviders")}
             </Link>
           </div>
 
-          {/* Scroll hint */}
           <div
             style={{
               marginTop: 80,
@@ -201,12 +187,11 @@ export default function HomePage() {
               textTransform: "uppercase",
             }}
           >
-            <span>Discover</span>
+            <span>{t("home.discover")}</span>
             <ChevronDown size={16} style={{ animation: "slideUp 1.5s ease-in-out infinite alternate" }} />
           </div>
         </div>
 
-        {/* Stats bar */}
         <div
           style={{
             position: "absolute",
@@ -229,10 +214,10 @@ export default function HomePage() {
             }}
           >
             {[
-              { value: "500+", label: "Curated Providers" },
-              { value: "45", label: "Destinations" },
-              { value: "< 2hr", label: "Avg Response" },
-              { value: "100%", label: "Contact Protected" },
+              { value: "500+", label: t("home.stats.providers") },
+              { value: "45", label: t("home.stats.destinations") },
+              { value: "< 2hr", label: t("home.stats.response") },
+              { value: "100%", label: t("home.stats.protected") },
             ].map((stat) => (
               <div key={stat.label} style={{ textAlign: "center" }}>
                 <div style={{ fontFamily: "Noto Serif", fontSize: 22, color: "var(--gold)", fontWeight: 300 }}>
@@ -251,12 +236,12 @@ export default function HomePage() {
       <section style={{ padding: "128px 0" }}>
         <div className="container-luxury">
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>Bespoke Services</p>
+            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>{t("home.bespoke")}</p>
             <h2 className="headline-xl" style={{ fontFamily: "Noto Serif", marginBottom: 16 }}>
-              Curated for the Discerning Few
+              {t("home.curated")}
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: 560, margin: "0 auto", fontSize: 16 }}>
-              Our marketplace focuses on two pillars of luxury hospitality — with more experiences coming soon.
+              {t("home.marketplace")}
             </p>
           </div>
 
@@ -270,11 +255,14 @@ export default function HomePage() {
                 <div
                   className="card"
                   style={{
-                    padding: 40,
+                    padding: 0,
                     cursor: cat.soon ? "default" : "pointer",
                     opacity: cat.soon ? 0.6 : 1,
                     transition: "all 0.3s ease",
                     height: "100%",
+                    overflow: "hidden",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                   onMouseEnter={e => {
                     if (!cat.soon) {
@@ -287,23 +275,27 @@ export default function HomePage() {
                     (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
                   }}
                 >
-                  <div style={{ fontSize: 40, marginBottom: 24 }}>{cat.emoji}</div>
-                  <div className="label-caps" style={{ color: "var(--gold)", marginBottom: 12 }}>{cat.detail}</div>
-                  <h3 style={{ fontFamily: "Noto Serif", fontSize: 24, marginBottom: 16, color: "var(--text-primary)" }}>
-                    {cat.label}
-                  </h3>
-                  <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7, marginBottom: 28 }}>
-                    {cat.desc}
-                  </p>
-                  {!cat.soon && (
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--gold)", fontSize: 13, fontWeight: 600 }}>
-                      <span>Explore {cat.label}</span>
-                      <ArrowRight size={14} />
-                    </div>
-                  )}
-                  {cat.soon && (
-                    <span className="badge badge-muted">Coming Soon</span>
-                  )}
+                  <div style={{ position: "relative", width: "100%", height: 240 }}>
+                    <Image src={cat.image} alt={cat.label} fill style={{ objectFit: "cover" }} />
+                  </div>
+                  <div style={{ padding: 40, flex: 1 }}>
+                    <div className="label-caps" style={{ color: "var(--gold)", marginBottom: 12 }}>{cat.detail}</div>
+                    <h3 style={{ fontFamily: "Noto Serif", fontSize: 24, marginBottom: 16, color: "var(--text-primary)" }}>
+                      {cat.label}
+                    </h3>
+                    <p style={{ color: "var(--text-secondary)", fontSize: 14, lineHeight: 1.7, marginBottom: 28 }}>
+                      {cat.desc}
+                    </p>
+                    {!cat.soon && (
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--gold)", fontSize: 13, fontWeight: 600 }}>
+                        <span>{t("home.explore")} {cat.label}</span>
+                        <ArrowRight size={14} />
+                      </div>
+                    )}
+                    {cat.soon && (
+                      <span className="badge badge-muted">{t("home.comingSoon")}</span>
+                    )}
+                  </div>
                 </div>
               </Link>
             ))}
@@ -315,12 +307,12 @@ export default function HomePage() {
       <section id="how-it-works" style={{ padding: "128px 0", background: "var(--bg-surface)" }}>
         <div className="container-luxury">
           <div style={{ textAlign: "center", marginBottom: 80 }}>
-            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>The Process</p>
+            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>{t("home.process")}</p>
             <h2 className="headline-xl" style={{ fontFamily: "Noto Serif", marginBottom: 16 }}>
-              How Luxury Access Works
+              {t("home.howItWorksTitle")}
             </h2>
             <p style={{ color: "var(--text-secondary)", maxWidth: 520, margin: "0 auto" }}>
-              A seamless five-step journey from request to experience — with privacy protected at every stage.
+              {t("home.howItWorksSub")}
             </p>
           </div>
 
@@ -335,7 +327,6 @@ export default function HomePage() {
                   position: "relative",
                 }}
               >
-                {/* Step number */}
                 <div
                   style={{
                     fontFamily: "Noto Serif",
@@ -350,7 +341,6 @@ export default function HomePage() {
                 >
                   {item.step}
                 </div>
-
                 <h3
                   style={{
                     fontFamily: "Noto Serif",
@@ -365,11 +355,9 @@ export default function HomePage() {
                 <p style={{ color: "var(--text-secondary)", fontSize: 13, lineHeight: 1.7 }}>
                   {item.desc}
                 </p>
-
-                {/* Lock badge on last step */}
                 {i === howItWorks.length - 1 && (
                   <div className="contact-locked" style={{ marginTop: 16, fontSize: 11 }}>
-                    <Lock size={11} /> Contact released after payment only
+                    <Lock size={11} /> {t("home.contactLocked")}
                   </div>
                 )}
               </div>
@@ -383,13 +371,13 @@ export default function HomePage() {
         <div className="container-luxury">
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 56, flexWrap: "wrap", gap: 16 }}>
             <div>
-              <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>Featured Providers</p>
+              <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>{t("home.featured")}</p>
               <h2 className="headline-xl" style={{ fontFamily: "Noto Serif" }}>
-                Meet Our Curated Network
+                {t("home.meetNetwork")}
               </h2>
             </div>
             <Link href="/chefs" className="btn btn-ghost" style={{ textDecoration: "none" }}>
-              View All Providers <ArrowRight size={14} />
+              {t("home.viewAll")} <ArrowRight size={14} />
             </Link>
           </div>
 
@@ -399,7 +387,6 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Anti-leakage note */}
           <div
             style={{
               marginTop: 48,
@@ -415,11 +402,10 @@ export default function HomePage() {
             <Lock size={20} color="var(--gold)" />
             <div>
               <p style={{ fontSize: 14, fontWeight: 600, color: "var(--text-primary)", marginBottom: 2 }}>
-                Contact Protection Active
+                {t("home.protection.title")}
               </p>
               <p style={{ fontSize: 13, color: "var(--text-secondary)" }}>
-                Provider phone numbers, email addresses, Instagram handles, and websites are hidden on all profiles.
-                They are released exclusively after a confirmed, paid booking through this platform.
+                {t("home.protection.desc")}
               </p>
             </div>
           </div>
@@ -430,9 +416,9 @@ export default function HomePage() {
       <section style={{ padding: "128px 0", background: "var(--bg-surface)" }}>
         <div className="container-luxury">
           <div style={{ textAlign: "center", marginBottom: 72 }}>
-            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>Why Luxury Access</p>
+            <p className="label-caps" style={{ color: "var(--gold)", marginBottom: 16 }}>{t("home.trust")}</p>
             <h2 className="headline-xl" style={{ fontFamily: "Noto Serif" }}>
-              Built for the Exceptional
+              {t("home.builtFor")}
             </h2>
           </div>
 
@@ -477,23 +463,24 @@ export default function HomePage() {
             alt="Luxury Access mark"
             width={72}
             height={72}
+            className="logo-dynamic"
             style={{ objectFit: "contain", marginBottom: 32, opacity: 0.7 }}
           />
           <h2
             className="headline-xl"
             style={{ fontFamily: "Noto Serif", marginBottom: 20 }}
           >
-            Ready for an Extraordinary Experience?
+            {t("home.ready")}
           </h2>
           <p style={{ color: "var(--text-secondary)", fontSize: 16, marginBottom: 40, maxWidth: 480, margin: "0 auto 40px" }}>
-            Submit your first request in minutes. We&apos;ll handle the rest.
+            {t("home.submit")}
           </p>
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/request" className="btn btn-primary btn-lg" style={{ textDecoration: "none" }}>
-              Start a Request <ArrowRight size={16} />
+              {t("nav.startRequest")} <ArrowRight size={16} />
             </Link>
             <Link href="/#how-it-works" className="btn btn-ghost btn-lg" style={{ textDecoration: "none" }}>
-              How It Works
+              {t("nav.howItWorks")}
             </Link>
           </div>
         </div>
