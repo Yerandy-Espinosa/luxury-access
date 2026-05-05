@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Mail } from "lucide-react";
+// Removed unused icons
 
 const footerLinks = {
   Services: [
