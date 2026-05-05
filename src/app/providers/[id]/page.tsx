@@ -35,7 +35,7 @@ export default function ProviderProfilePage({ params }: { params: Promise<{ id: 
               src={provider.imageUrl}
               alt={provider.name}
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", objectPosition: "center 25%" }}
               priority
             />
           ) : (

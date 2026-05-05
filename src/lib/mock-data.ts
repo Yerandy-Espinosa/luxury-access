@@ -19,8 +19,7 @@ export const providers: Provider[] = [
     imageUrl: "/chef_mateo.png",
     galleryImages: [
       "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1550966842-28a2a2d989ce?q=80&w=2070&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=2070&auto=format&fit=crop"
     ],
     cuisineStyle: "French Mediterranean",
     rating: 4.9,

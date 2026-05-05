@@ -121,7 +121,7 @@ export default function ProviderCard({ provider, compact = false }: ProviderCard
           {/* Background Image / Placeholder */}
           <div className="img-inner" style={{ position: "relative", width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 8 }}>
             {provider.imageUrl ? (
-              <Image src={provider.imageUrl} alt={provider.name} fill style={{ objectFit: "cover" }} />
+              <Image src={provider.imageUrl} alt={provider.name} fill style={{ objectFit: "cover", objectPosition: "center 25%" }} />
             ) : (
               <>
                 <span style={{ fontSize: 40, opacity: 0.3 }}>{provider.category === "chef" ? "👨‍🍳" : "🏛️"}</span>
